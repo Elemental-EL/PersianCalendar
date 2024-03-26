@@ -1,0 +1,31 @@
+.root {
+    -fx-background-color: #222;
+}
+.highlight {
+    -fx-background-color: #00000025;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+}
+.highlight:hover {
+    -fx-background-color: #00000075;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+}
+.btn {
+    -fx-background-color: #00000025;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+}
+.btn:hover {
+    -fx-background-color: #00000075;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+}
+.btn:pressed {
+    -fx-background-color: #005B41;
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+}
+.mainPane {
+    -fx-background-color: #005B41;
+}
