@@ -78,7 +78,10 @@ public class HelloController implements Initializable {
         double spacingH = calendar.getHgap();
         double spacingV = calendar.getVgap();
         int monthMaxDate = dateFocus.getActualMaximum(PersianCalendar.DAY_OF_MONTH);
-        int dateOffset = dateFocus.get(PersianCalendar.DAY_OF_WEEK);
+        PersianCalendar firstDayOfMonth = new PersianCalendar();
+        firstDayOfMonth.setTimeInMillis(dateFocus.getTimeInMillis());
+        firstDayOfMonth.set(PersianCalendar.DAY_OF_MONTH, 1);
+        int dateOffset = firstDayOfMonth.get(PersianCalendar.DAY_OF_WEEK) ;
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 7; j++) {
                 StackPane stackPane = new StackPane();
@@ -91,22 +94,17 @@ public class HelloController implements Initializable {
                 double rectangleHeight = (calendarHeight/6) - strokeWidth - spacingV;
                 rectangle.setHeight(rectangleHeight);
                 stackPane.getChildren().add(rectangle);
-                int calculatedDate = (j+1)+(7*i);
-                if(calculatedDate > dateOffset){
-                    int currentDate = calculatedDate - dateOffset;
-                    if(currentDate <= monthMaxDate){
-                        StackPane textContainer = new StackPane();
-                        textContainer.setPrefSize(rectangleWidth, rectangleHeight);
-                        textContainer.setLayoutX(rectangle.getX());
-                        textContainer.setLayoutY(rectangle.getY());
-                        Text date = new Text(String.valueOf(currentDate));
-                        date.setTextAlignment(TextAlignment.CENTER);
-                        date.setFont(Font.font(22));
-                        date.setFill(Color.WHITE);
-                        textContainer.getChildren().add(date);
-                        stackPane.getChildren().add(textContainer);
-                    }
-                    if(today.get(PersianCalendar.YEAR) == dateFocus.get(PersianCalendar.YEAR) && today.get(PersianCalendar.MONTH) == dateFocus.get(PersianCalendar.MONTH) && today.get(PersianCalendar.DAY_OF_MONTH) == currentDate){
+                int calculatedDate = (j - dateOffset) + 1 + (7 * i);
+                if (calculatedDate >= 1 && calculatedDate <= monthMaxDate) {
+                    StackPane textContainer = new StackPane();
+                    textContainer.setPrefSize(rectangleWidth, rectangleHeight);
+                    Text date = new Text(String.valueOf(calculatedDate));
+                    date.setTextAlignment(TextAlignment.CENTER);
+                    date.setFont(Font.font(22));
+                    date.setFill(Color.WHITE);
+                    textContainer.getChildren().add(date);
+                    stackPane.getChildren().add(textContainer);
+                    if (today.get(PersianCalendar.YEAR) == dateFocus.get(PersianCalendar.YEAR) && today.get(PersianCalendar.MONTH) == dateFocus.get(PersianCalendar.MONTH) && today.get(PersianCalendar.DAY_OF_MONTH) == calculatedDate) {
                         rectangle.setStroke(Color.web("#436850"));
                     }
                 }

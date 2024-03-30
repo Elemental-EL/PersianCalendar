@@ -26,37 +26,37 @@
   </HBox>
   <HBox alignment="CENTER" layoutX="6.0" layoutY="72.0" prefHeight="44.0" prefWidth="730.0" spacing="65.0">
     <children>
-      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="یکشنبه" textAlignment="CENTER">
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="شنبه" textAlignment="CENTER">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-      <Text fill="WHITE" layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="دوشنبه" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="یکشنبه" textAlignment="CENTER">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-      <Text fill="WHITE" layoutX="222.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="سه شنبه" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="222.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="دوشنبه" textAlignment="CENTER">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-      <Text fill="WHITE" layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="چهارشنبه" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="سه شنبه" textAlignment="CENTER">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-      <Text fill="WHITE" layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="پنجشنبه" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="چهارشنبه" textAlignment="CENTER">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-      <Text fill="WHITE" layoutX="251.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="جمعه" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="251.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="پنجشنبه" textAlignment="CENTER">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Text>
-      <Text fill="WHITE" layoutX="266.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="شنبه" textAlignment="CENTER">
+      <Text fill="WHITE" layoutX="266.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="جمعه" textAlignment="CENTER">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
